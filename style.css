@@ -260,7 +260,7 @@ body {
     color: #28aaf0;
 }
 
-.box7{
+.box7 {
     display: flex;
     width: 60%;
     flex-direction: column; /* เรียงในแนวตั้ง */
@@ -294,6 +294,8 @@ body {
 .thesis {
     display: flex; /* ใช้ Flexbox ในการจัดวาง */
     padding: 20px; /* ช่องว่างรอบๆ */
+    display: flex;
+    flex-direction: column;
 }
 
 .clip video {
@@ -308,7 +310,7 @@ body {
     display: flex;
     flex-direction: column; /* เรียงในแนวตั้ง */
     gap: 20px; /* ระยะห่างระหว่าง item */
-    width: 40%;
+    width: 10%;
 }
 
 .box8 .item22 {
