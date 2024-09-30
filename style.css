@@ -70,13 +70,20 @@ ul li a:hover {
     gap: 0px 24px;
     background-color: #ffffff;
 }
-.hero2 img{
-    margin-left: 24px;
-    margin-right: 24px;
-    margin-top: 32px;
-    margin-bottom: 32px;
-    width: 100%;
+.hero2 {
+    display: flex;
+    width: 60%;
+    flex-direction: column; /* เรียงในแนวตั้ง */
+    gap: 20px; /* ระยะห่างระหว่างภาพและข้อความ */
+    margin-right: 24px; /* ช่องว่างด้านขวา */
+    margin-left: 5px;
     
+}
+.hero2 img{
+    margin-right: 24px; /* ระยะห่างด้านขวา */
+    margin-bottom: 32px; /* ระยะห่างด้านล่าง */
+    width: 100%; /* ขยายเต็มที่ */
+    height: auto;
 }
 
 .herotext{
@@ -109,24 +116,222 @@ ul li a:hover {
 }
 
 /* Main2 */
-.information{
+* {
+    box-sizing: border-box; /* ทำให้การคำนวณขนาดของกล่องถูกต้อง */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif; /* ฟอนต์ที่ใช้ในหน้าเว็บ */
+    background-color: #ffffff; /* สีพื้นหลัง */
+
+}
+
+.information {
+    display: flex; /* ใช้ Flexbox ในการจัดวาง */
+    
+    padding: 20px; /* ช่องว่างรอบๆ */
+    
+}
+
+.box1 {
     display: flex;
-    background-color: #ffffff;
-    margin-top:  2rem;
-    margin-bottom: 2rem;
+    width: 60%;
+    flex-direction: column; /* เรียงในแนวตั้ง */
+    gap: 20px; /* ระยะห่างระหว่างภาพและข้อความ */
+    margin-right: 24px; /* ช่องว่างด้านขวา */
+    margin-left: 5px; /* ช่องว่างด้านซ้าย */
+    
 }
 
-.photo img{
-    width: 80%;
-    margin-right: 24px;
-    margin-left: 24px;
-    margin-bottom: 2rem;
+
+.photo img {
+
+    margin-right: 24px; /* ระยะห่างด้านขวา */
+    margin-bottom: 32px; /* ระยะห่างด้านล่าง */
+    width: 100%; /* ขยายเต็มที่ */
+    height: auto; /* รักษาสัดส่วนของภาพ */
 }
 
-.Textphoto{
-    margin-right: 24px;
-    margin-left: 24px;
+.textphoto {
+    max-width: 600px; /* ขนาดสูงสุดของข้อความ */
+    text-align: left; /* จัดข้อความทางซ้าย */
+    margin-right: 24px; /* ช่องว่างด้านขวา */
+    gap: 3rem;
+}
+
+.textphoto h1 {
+    font-size: 28px; /* ขนาดตัวอักษรของหัวข้อ */
+    color: #333; /* สีหัวข้อ */
+    margin-bottom: 10px; /* ช่องว่างใต้หัวข้อ */
+}
+
+.textphoto p {
+    font-size: 16px; /* ขนาดตัวอักษรของพารากราฟ */
+    line-height: 1.6; /* ระยะห่างระหว่างบรรทัด */
+    color: #666; /* สีข้อความ */
+    margin-bottom: 15px; /* ช่องว่างใต้พารากราฟ */
+}
+
+.box2 {
+    flex: 1; /* ให้ box2 ใช้พื้นที่น้อยกว่า box1 */
+    display: flex;
+    flex-direction: column; /* เรียงในแนวตั้ง */
+    gap: 20px; /* ระยะห่างระหว่าง item */
+    width: 40%;
+}
+
+.box2 .item {
+    background-color: #fff; /* พื้นหลังขาว */
+    padding: 15px; /* ช่องว่างภายใน */
+    text-align: justify; /* จัดข้อความให้กลาง */
     gap: 2rem;
 }
 
+.box2 img {
+    width: 100%; /* ให้ภาพขยายเต็มที่ */
+    height: auto; /* รักษาสัดส่วนของภาพ */
+    max-width: 150px; /* ขนาดสูงสุดของภาพ */
+    margin-bottom: 10px; /* ช่องว่างใต้ภาพ */
 
+}
+
+.box2 h4 {
+    font-size: 20px; /* ขนาดตัวอักษรของหัวข้อย่อย */
+    margin: 10px 0; /* ช่องว่างบนและล่าง */
+}
+
+.box2 p {
+    font-size: 14px; /* ขนาดตัวอักษรของพารากราฟใน box2 */
+    color: #555; /* สีข้อความ */
+}
+
+.Readmore {
+    color: #007bff; /* สีฟ้าของตัวหนังสือ */
+    text-decoration: none; /* เอาเส้นใต้ของลิงก์ออก */
+    font-size: 14px; /* ขนาดตัวอักษร */
+}
+
+.Readmore:hover {
+    text-decoration: underline; /* เมื่อ hover ให้มีเส้นใต้ */
+    color: #0056b3; /* สีฟ้าเข้มขึ้นเมื่อ hover */
+}
+
+.item{
+    display: flex;
+    align-items: center;
+}
+
+
+/* Main3 */
+
+.start{
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+    grid-gap: 3.2rem;
+}
+
+.container-course{
+    background-color: #f9f7f6;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all .3s;
+}
+.course1course11{
+    display: flex;
+    justify-content:center
+}
+
+
+/* Main4 */
+
+.thesisexhibits{
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    color: #28aaf0;
+}
+
+.box7{
+    display: flex;
+    width: 60%;
+    flex-direction: column; /* เรียงในแนวตั้ง */
+    gap: 20px; /* ระยะห่างระหว่างภาพและข้อความ */
+    margin-right: 24px; /* ช่องว่างด้านขวา */
+    margin-left: 5px;
+    
+
+}
+
+.textvideo {
+    max-width: 600px; /* ขนาดสูงสุดของข้อความ */
+    text-align: left; /* จัดข้อความทางซ้าย */
+    margin-right: 24px; /* ช่องว่างด้านขวา */
+    gap: 3rem;
+}
+
+.textvideo h1 {
+    font-size: 28px; /* ขนาดตัวอักษรของหัวข้อ */
+    color: #333; /* สีหัวข้อ */
+    margin-bottom: 10px; /* ช่องว่างใต้หัวข้อ */
+}
+
+.textvideo p {
+    font-size: 16px; /* ขนาดตัวอักษรของพารากราฟ */
+    line-height: 1.6; /* ระยะห่างระหว่างบรรทัด */
+    color: #666; /* สีข้อความ */
+    margin-bottom: 15px; /* ช่องว่างใต้พารากราฟ */
+}
+
+.thesis {
+    display: flex; /* ใช้ Flexbox ในการจัดวาง */
+    padding: 20px; /* ช่องว่างรอบๆ */
+}
+
+.clip video {
+    margin-right: 24px; /* ระยะห่างด้านขวา */
+    margin-bottom: 32px; /* ระยะห่างด้านล่าง */
+    width: 100%; /* ขยายเต็มที่ */
+    height: auto; /* รักษาสัดส่วนของภาพ */
+}
+
+.box8 {
+    flex: 1; /* ให้ box2 ใช้พื้นที่น้อยกว่า box1 */
+    display: flex;
+    flex-direction: column; /* เรียงในแนวตั้ง */
+    gap: 20px; /* ระยะห่างระหว่าง item */
+    width: 40%;
+}
+
+.box8 .item22 {
+    background-color: #fff; /* พื้นหลังขาว */
+    padding: 15px; /* ช่องว่างภายใน */
+    text-align: justify; /* จัดข้อความให้กลาง */
+    gap: 2rem;
+}
+
+.box8 img {
+    width: 100%; /* ให้ภาพขยายเต็มที่ */
+    height: auto; /* รักษาสัดส่วนของภาพ */
+    max-width: 150px; /* ขนาดสูงสุดของภาพ */
+    margin-bottom: 10px; /* ช่องว่างใต้ภาพ */
+
+}
+
+.box8 h4 {
+    font-size: 20px; /* ขนาดตัวอักษรของหัวข้อย่อย */
+    margin: 10px 0; /* ช่องว่างบนและล่าง */
+}
+
+.box8 p {
+    font-size: 14px; /* ขนาดตัวอักษรของพารากราฟใน box2 */
+    color: #555; /* สีข้อความ */
+}
